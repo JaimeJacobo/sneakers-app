@@ -1,0 +1,79 @@
+.display-none {
+  display: none;
+}
+
+.Home {
+  h2 {
+    margin-top: 4vh;
+    font-size: 3.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .intro {
+    position: absolute;
+    font-size: 2rem;
+    left: 110px;
+    top: 210px;
+  }
+
+  .snickers-list {
+    position: absolute;
+    top: 350px;
+    width: 480px;
+    left: 135px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: rgba(151, 36, 36, 0.8);
+    p {
+      padding: 10px;
+      border: 1px solid white;
+      color: white;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .sneaker {
+    position: absolute;
+    z-index: -1;
+    &__travis {
+      right: -40px;
+      top: 118px;
+    }
+
+    &__taylor {
+      right: -140px;
+      top: 150px;
+    }
+
+    &__yeezy {
+      right: -240px;
+      top: 182px;
+    }
+
+    &__dunk {
+      right: -340px;
+      top: 214px;
+    }
+
+    &__solar {
+      right: -440px;
+      top: 276px;
+    }
+
+    &__chuck {
+      right: -540px;
+      top: 306px;
+    }
+  }
+}
