@@ -51,15 +51,53 @@ const Login = () => {
       {logInSuccess ? (
         <Redirect to="/profile" />
       ) : (
-        <>
-          <Navbar />
-          <h2>Log in Page</h2>
-          <p>Username</p>
-          <input id="username" type="text"></input>
-          <p>Password</p>
-          <input id="password" type="password"></input>
-          <button onClick={() => handleSubmit()}>Log in loco 😗</button>
-        </>
+        <div
+          style={{
+            height: "calc(var(--vh, 1vh) * 100)",
+          }}
+        >
+          <div style={{ position: "fixed", width: "100%" }}>
+            <Navbar />
+          </div>
+
+          <div className="Login container">
+            <div className="form-signin">
+              <img
+                src={process.env.PUBLIC_URL + "/img/jordans-red.png"}
+                alt="Jordans red"
+              />
+              <p class="Login__mainText h3 mb-3 font-weight-normal">Log in</p>{" "}
+              <div className="Login__buttonAndMsg">
+                <input
+                  type="text"
+                  id="username"
+                  class="form-control"
+                  placeholder="Username"
+                  required=""
+                  autofocus=""
+                />
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  placeholder="Password"
+                  required=""
+                />
+              </div>
+              <div>
+                <button
+                  class="btn btn-lg btn-primary btn-block"
+                  onClick={() => handleSubmit()}
+                >
+                  Log in
+                </button>
+                <p class="mt-3 mb-3 text-muted">
+                  © Enjoy the experience &#128516;
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </>
   );

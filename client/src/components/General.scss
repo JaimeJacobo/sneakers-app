@@ -15,7 +15,7 @@
   .intro {
     position: absolute;
     font-size: 2rem;
-    left: 110px;
+    left: 8%;
     top: 210px;
   }
 
@@ -23,7 +23,7 @@
     position: absolute;
     top: 350px;
     width: 480px;
-    left: 135px;
+    left: 10%;
     font-size: 1.5rem;
     border-radius: 10px;
     border: 1px solid white;
@@ -37,7 +37,7 @@
       align-items: center;
       justify-content: center;
 
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
     }
@@ -77,3 +77,56 @@
     }
   }
 }
+
+.Navbar {
+  font-size: 20px;
+
+  p {
+    margin: 0;
+  }
+
+  .navbar {
+    height: 80px;
+    width: 100%;
+  }
+}
+
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 370px;
+  height: calc(var(--vh, 1vh) * 100);
+
+  .form-signin {
+    width: 100%;
+    background-color: rgba(187, 187, 187, 0.7);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 20px;
+
+    img {
+      position: fixed;
+      width: 110vw;
+      top: -18%;
+      z-index: -1;
+      right: -50%;
+    }
+  }
+
+  &__mainText {
+    margin-top: 30px;
+  }
+
+  &__buttonAndMsg {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+}
+
+// navbar navbar-expand-lg navbar-light bg-light
+// navbar navbar-expand-lg navbar-light bg-light

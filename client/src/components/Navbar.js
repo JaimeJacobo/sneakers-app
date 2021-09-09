@@ -4,6 +4,8 @@ import { Link, Redirect } from "react-router-dom";
 
 import MyContext from "../contexts/context";
 
+import "./General.scss";
+
 const Navbar = () => {
   const { loggedUser, setLoggedUser } = useContext(MyContext);
 
@@ -26,10 +28,9 @@ const Navbar = () => {
       {logoutSuccess ? (
         <Redirect to="/" />
       ) : (
-        <>
-          {" "}
+        <div className="Navbar">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <p className="navbar-brand">Sneakers App</p>
+            <p>Sneakers App</p>
             <button
               class="navbar-toggler"
               type="button"
@@ -49,7 +50,7 @@ const Navbar = () => {
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
-                    Home <span className="sr-only">(current)</span>
+                    Home
                   </Link>
                 </li>
                 {!loggedUser.id && (
@@ -160,7 +161,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-        </>
+        </div>
       )}
     </>
   );

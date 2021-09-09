@@ -62,7 +62,9 @@ const Sneakers = () => {
         } else {
           return (
             <>
-              <Navbar />
+              <div style={{ position: "fixed", width: "100%" }}>
+                <Navbar />
+              </div>
               <h2>Search for your favorite sneakers:</h2>
 
               <input id="nameInput" type="text"></input>
