@@ -72,12 +72,12 @@ passport.use(
           // console.log(userInfo[0][0])
           if (userInfo[0].length === 0) {
             //Si el usuario no existe
-            return next(null, false, { message: "Incorrect username" });
+            return next(null, false, { message: "Incorrect username or password." });
           }
 
           if (!bcrypt.compareSync(password, userInfo[0][0].password)) {
             //Si la contraseña no coincide
-            return next(null, false, { message: "Incorrect password" });
+            return next(null, false, { message: "Incorrect username or password." });
           }
 
           return next(null, userInfo[0][0]);

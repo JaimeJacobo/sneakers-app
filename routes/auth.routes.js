@@ -39,7 +39,7 @@ router.post("/signup", (req, res) => {
   //Que el usuario y contraseña no estén vacíos
   if (username === "" || password === "") {
     res.send({
-      message: "Tienes que rellenar todos los campos",
+      message: "You need to fill all fields.",
     });
   }
   //Que el usuario que intentas crear no exista ya
@@ -49,14 +49,17 @@ router.post("/signup", (req, res) => {
     .then((userInfo) => {
       if (userInfo[0].length > 0) {
         //El usuario ya existe
-        res.send({ message: "Este usuario ya existe" });
+        res.send({ message: "This user already exists." });
       } else {
         //El usuario no existe, por lo tanto puedo crearlo
         const hashedPassword = bcrypt.hashSync(password, 10);
         // User.create({ username, password: hashedPassword })
         database
           .promise()
-          .query("INSERT INTO users (username, password) VALUES (?, ?)", [username, hashedPassword])
+          .query("INSERT INTO users (username, password) VALUES (?, ?)", [
+            username,
+            hashedPassword,
+          ])
           .then(() => {
             res.send({});
           });
@@ -83,6 +86,5 @@ router.post("/logout", (req, res) => {
   req.logout();
   res.redirect("/api/auth/check-auth");
 });
-
 
 module.exports = router;

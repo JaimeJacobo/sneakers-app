@@ -14,6 +14,7 @@ const Login = () => {
     signupSuccess,
     setSignupSuccess,
     setActualPage,
+    errorMessage,
     setErrorMessage,
     setLoggedUser,
   } = useContext(MyContext);
@@ -61,9 +62,17 @@ const Login = () => {
           </div>
 
           <div className="Login container">
+            <div
+              style={{ display: !errorMessage && "none" }}
+              class="alert alert-danger zoomer"
+              role="alert"
+            >
+              {errorMessage}
+            </div>
             <div className="form-signin">
               <img
-                src={process.env.PUBLIC_URL + "/img/jordans-red.png"}
+                className="jordans-image"
+                src={process.env.PUBLIC_URL + "/img/air-jordan-red.png"}
                 alt="Jordans red"
               />
               <p class="Login__mainText h3 mb-3 font-weight-normal">Log in</p>{" "}
@@ -86,7 +95,7 @@ const Login = () => {
               </div>
               <div>
                 <button
-                  class="btn btn-lg btn-primary btn-block"
+                  class="btn btn-lg btn-block red"
                   onClick={() => handleSubmit()}
                 >
                   Log in

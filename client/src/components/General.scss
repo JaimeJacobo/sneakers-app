@@ -15,7 +15,7 @@
   .intro {
     position: absolute;
     font-size: 2rem;
-    left: 8%;
+    left: 2%;
     top: 210px;
   }
 
@@ -23,7 +23,7 @@
     position: absolute;
     top: 350px;
     width: 480px;
-    left: 10%;
+    left: 4%;
     font-size: 1.5rem;
     border-radius: 10px;
     border: 1px solid white;
@@ -97,6 +97,21 @@
   align-items: center;
   max-width: 370px;
   height: calc(var(--vh, 1vh) * 100);
+  flex-direction: column;
+
+  .blue {
+    background-color: rgb(29, 77, 173);
+    color: white;
+  }
+
+  .red {
+    background-color: rgb(240, 92, 97);
+  }
+
+  .alert {
+    position: absolute;
+    top: 29vh;
+  }
 
   .form-signin {
     width: 100%;
@@ -107,12 +122,14 @@
     justify-content: space-evenly;
     border-radius: 20px;
 
-    img {
-      position: fixed;
-      width: 110vw;
-      top: -18%;
-      z-index: -1;
-      right: -50%;
+    .jordans-image {
+      @media screen and (min-width: 1200px) {
+        position: fixed;
+        width: 110vw;
+        top: -18%;
+        z-index: -1;
+        right: -50%;
+      }
     }
   }
 
