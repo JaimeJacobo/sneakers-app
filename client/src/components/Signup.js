@@ -1,4 +1,4 @@
-import { useContext, useMemo } from "react";
+import { useContext, useEffect, useMemo } from "react";
 import { Redirect } from "react-router-dom";
 
 import axios from "axios";
@@ -22,6 +22,13 @@ const Signup = () => {
   useMemo(() => {
     setActualPage("signup");
   }, []);
+
+  //Component Did Unmount
+  useEffect(()=>{
+    return ()=>{
+      setErrorMessage("")
+    }
+  }, [])
 
   const changeHandler = (event, type) => {
     setUserInput({

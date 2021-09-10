@@ -17,11 +17,10 @@ const Home = () => {
   const [moveChuck, setMoveChuck] = useState(false);
 
   useEffect(() => {
-    setActualPage("home");
-
     const sneakers = document.getElementsByClassName("sneaker");
 
     let counter = 0;
+
     for (let i = 0; i < sneakers.length; i++) {
       setTimeout(() => {
         sneakers[i].classList.remove("display-none");
@@ -29,6 +28,8 @@ const Home = () => {
       }, counter);
       counter += 500;
     }
+
+    setActualPage("home");
   }, []);
 
   return (

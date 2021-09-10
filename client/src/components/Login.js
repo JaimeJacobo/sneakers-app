@@ -22,6 +22,9 @@ const Login = () => {
   useEffect(() => {
     signupSuccess && setSignupSuccess(false);
     setActualPage("login");
+    return () => {
+      setErrorMessage("");
+    };
   }, []);
 
   const handleSubmit = () => {

@@ -145,5 +145,39 @@
   }
 }
 
-// navbar navbar-expand-lg navbar-light bg-light
-// navbar navbar-expand-lg navbar-light bg-light
+.Sneakers {
+  h2 {
+    padding-top: 110px;
+  }
+
+  &__searcher {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    div {
+      max-width: 700px;
+      display: flex;
+    }
+  }
+
+  &__loader {
+    font-size: 3.5rem;
+  }
+
+  &__sneaker-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 2rem;
+      margin-bottom: 100px;
+    }
+  }
+}
